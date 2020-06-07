@@ -29,6 +29,5 @@ server.get("/search", (req, res) => {
     return res.render("search-results.html")
 })
 
-
 //ligar servidor
 server.listen(3000)

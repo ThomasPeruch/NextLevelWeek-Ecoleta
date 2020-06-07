@@ -23,6 +23,26 @@
     #page-search-results .cards{
         grid-template-columns: 1fr ;
     }
+
+    #page-create-point .field-group{
+        flex-direction: column;
+    }
+
+    #page-create-point .field-group .field + .field{
+        margin-left: 0;
+    }
+}
+
+@media(max-width:530px){
+    #page-create-point form legend{
+        flex-direction: column;
+    }
+
+    #page-create-point form .items-grid{
+        display: grid;
+        grid-template: none ;
+        gap: 16px;
+    }
 }
 
 @media(min-width:1440px){
