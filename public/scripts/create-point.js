@@ -50,6 +50,7 @@ const itemsToCollect = document.querySelectorAll(".items-grid li")
 for(let item of itemsToCollect){
    item.addEventListener("click",handleSelectedItem) 
 }
+
 const collectedItems = document.querySelector("input[name=items]")
 let selectedItems = [];
 
@@ -59,6 +60,7 @@ function handleSelectedItem(event){
     itemLi.classList.toggle("selected")
 
     const itemId =itemLi.dataset.id
+    console.log('ITEM ID: ',itemId)
 
 //verificar se existem itens selecionados, se sim pega-los
 
@@ -73,12 +75,14 @@ if(alreadySelected >=0 ){
         const itemIsDifferent = item !=itemId
         return itemIsDifferent      
     })
+
     selectedItems = filteredItems
 }else{
     //se não seleciona-los
     //atualizar o cmapo escondido com dados(itens) selecionados
     selectedItems.push(itemId)
 }
+console.log('selectedItems: ',selectedItems)
     collectedItems.value = selectedItems
 
 }
